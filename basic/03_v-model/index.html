@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Vue.js</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>1. Input -> Data</h1>
+        <h3>{{ myMessage }}</h3>
+        <input @input="onInputChange" type="text">
+
+        <h1>2. Input <-> data </h1>
+        <h3>{{ myMessage2 }}</h3>
+        <input v-model.lazy.trim="myMessage2" type="text">
+
+        <h1>3. CheckBox</h1>
+        <input type="checkbox" id="checkbox" v-model="isChecked">
+        <label for="checkbox">{{ isChecked }}</label>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

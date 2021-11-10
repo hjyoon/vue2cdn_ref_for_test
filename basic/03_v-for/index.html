@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Vue.js</title>
+</head>
+
+<body>
+    <div id="app">
+        <h2>String</h2>
+        <div v-for="(char, index) in myString" :key='index'>
+            {{ char }} / {{ index }}
+        </div>
+        <h2>Array</h2>
+        <div v-for="(fruit, index) in fruits" :key='index'>
+            {{ fruit }} / {{ index }}
+        </div>
+        <div v-for="todo in todos" :key="todo.id">
+            {{ todo.title }} : {{ todo.completed }}
+        </div>
+
+        <h2>Object</h2>
+        <div v-for="(value, key) in myObj" :key='key'>
+            {{ key }} : {{ value }}
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Vue.js</title>
+  </head>
+
+  <body>
+    <!-- view -->
+    <div id="app">
+      <h2>점심메뉴</h2>
+      <button @click="pickOneInLunchMenu">Pick One</button>
+      <p>{{ selectedLunchMenu }}</p>
+      <hr />
+      <h2>로또번호</h2>
+      <button @click="getLuckyNumbers">Get Lucky Numbers</button>
+      <p>{{ sampleNums }}</p>
+      <p>{{ sortedSampleNums }}</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
